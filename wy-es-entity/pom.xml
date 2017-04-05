@@ -19,5 +19,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
+
+		<!-- jpa注解 -->
+		<dependency>
+			<groupId>javax.persistence </groupId>
+			<artifactId>persistence-api</artifactId>
+		</dependency>
 	</dependencies>
 </project>

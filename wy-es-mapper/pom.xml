@@ -6,8 +6,7 @@
 		<artifactId>wy-es-api</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>wy-es-interface</artifactId>
-
+	<artifactId>wy-es-mapper</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -15,15 +14,15 @@
 			<artifactId>wy-es-entity</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<!-- 分页 -->
+		<!-- Mybatis -->
 		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper</artifactId>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
 		</dependency>
+		<!-- 配置通用mapper -->
 		<dependency>
-			<groupId>com.github.jsqlparser</groupId>
-			<artifactId>jsqlparser</artifactId>
+			<groupId>com.github.abel533</groupId>
+			<artifactId>mapper</artifactId>
 		</dependency>
-
 	</dependencies>
 </project>

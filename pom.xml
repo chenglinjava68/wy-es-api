@@ -14,6 +14,7 @@
 		<module>wy-es-repository</module>
 		<module>wy-es-service</module>
 		<module>wy-es-web</module>
+		<module>wy-es-mapper</module>
 	</modules>
 	<dependencies>
 		<!-- log -->

@@ -35,9 +35,5 @@ public class GoodsServiceImplTest extends BaseServiceImple<Goods, Long>
 		goods.setKeyWord("好商品嘿嘿");
 		insert(goods);
 	}
-	public void testBatchSave() {
-		
-		
-	}
 
 }

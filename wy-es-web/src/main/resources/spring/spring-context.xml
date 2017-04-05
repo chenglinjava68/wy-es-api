@@ -26,7 +26,19 @@
 	</bean>
 	<elasticsearch:repositories base-package="com.aomygod.es.repository" />
 
-	<context:component-scan base-package="com.aomygod.es" />
+    <aop:aspectj-autoproxy proxy-target-class="true"/> 
+	<!-- <import resource="spring-dubbo.xml" /> -->
 
-	<import resource="spring-dubbo.xml" />
+	<!-- 配置datasource -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		destroy-method="close">
+	<!-- <property name="driverClass" value="${jdbc.driver}" /> -->		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxActive" value="20" />
+	</bean>
+	<import resource="spring-mybatis.xml" />
+	<import resource="spring-transaction.xml" />
+
+	<context:component-scan base-package="com.aomygod" />
 </beans>

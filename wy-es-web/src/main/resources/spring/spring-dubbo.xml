@@ -13,7 +13,5 @@
 	<dubbo:service interface="com.aomygod.es.service.GoodsService"
 		ref="goodsService" group="${wy.search.dubbo.group}"  
 		version="${wy.search.dubbo.version}" />
-	<!-- 	timeout="${wy.search.dubbo.timeout}" 
-		retries="${wy.search.dubbo.check}" -->
 		
 </beans>

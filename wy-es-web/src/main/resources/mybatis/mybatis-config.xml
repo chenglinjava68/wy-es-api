@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"  
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+		<setting name="useGeneratedKeys" value="true" />
+		<setting name="defaultExecutorType" value="REUSE" />
+	</settings>
+
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageHelper">
+			<!--方言 -->
+			<property name="dialect" value="mysql" />
+			<!--默认FALSE，使用true时分页时会进行count查询 -->
+			<property name="rowBoundsWidthCount" value="true" />
+		</plugin>
+		<plugin interceptor="com.github.abel533.mapperhelper.MapperInterceptor">
+			<!--================================================ -->
+			<!--可配置参数说明(一般无需修改) -->
+			<!--================================================ -->
+			<!--UUID生成策略 -->
+			<!--配置UUID生成策略需要使用OGNL表达式 -->
+			<!--默认值32位长度:@java.util.UUID@randomUUID().toString().replace("-", "") -->
+			<!--<property name="UUID" value="@java.util.UUID@randomUUID().toString()"/> -->
+			<!--主键自增回写方法,默认值CALL IDENTITY(),适应于大多数数据库 -->
+			<!--<property name="IDENTITY" value="CALL IDENTITY()"/> -->
+			<!--主键自增回写方法执行顺序,默认AFTER,可选值为(BEFORE|AFTER) -->
+			<!--<property name="ORDER" value="AFTER"/> -->
+
+			<!-- 主键自增会写方法，默认Mysql -->
+			<property name="IDENTITY" value="MYSQL" />
+			<!-- 通用Mapper接口，多个通用接口用逗号隔开 -->
+			<!-- 使用扩展的mapper -->
+			<property name="mappers" value="com.aomygod.mp.base.mapper.BaseMapper" />
+			<!-- <property name="mappers" value="com.github.abel533.mapper.Mapper" 
+				/> -->
+		</plugin>
+	</plugins>
+</configuration>

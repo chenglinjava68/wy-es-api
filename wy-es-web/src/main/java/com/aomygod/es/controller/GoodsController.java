@@ -14,7 +14,7 @@ import com.aomygod.es.entity.Goods;
 import com.aomygod.es.service.GoodsService;
 
 @Controller
-@RequestMapping(value = "/goods")
+@RequestMapping(value = "/goods-es")
 public class GoodsController {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
